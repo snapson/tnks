@@ -1,0 +1,27 @@
+{
+  "name": "tnks",
+  "version": "0.0.1",
+  "description": "Tanks is the simple game, came to us from sega",
+  "author": "Nikita Zubarets <zubarets@gmail.com> (http://ua.linkedin.com/pub/nikita-zubarets/62/a/a1b)",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/snapson/tnks"
+  },
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "lodash": "2.x",
+    "express": "4.x",
+    "nodemon": "1.x",
+    "jade": "1.x",
+    "body-parser": "1.x",
+    "async": "1.4.x",
+    "chai": "1.9.x",
+    "superagent": "0.x"
+  },
+  "scripts": {
+    "start": "nodemon application/app.js",
+    "preinstall": "npm i -g nodemon; npm install -g mocha",
+    "test": "mocha --reporter tap application/test"
+  }
+}
