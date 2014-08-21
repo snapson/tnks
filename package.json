@@ -15,7 +15,7 @@
     "nodemon": "1.x",
     "jade": "1.x",
     "body-parser": "1.x",
-    "async": "1.4.x",
+    "async": "0.9.x",
     "chai": "1.9.x",
     "superagent": "0.x"
   },
