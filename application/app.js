@@ -7,10 +7,10 @@ var bodyParser = require('body-parser');
 var app = express();
 
 /*
-  TODO: 
+  TODO:
 */
 
-app.set('port', process.env.PORT || 5353);
+app.set('port', process.env.PORT || 5454);
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('templates', path.resolve(__dirname, 'templates'));
 app.set('assets', path.resolve(__dirname, 'assets'));

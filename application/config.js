@@ -1,3 +1,3 @@
 module.exports = {
-  // TODO: constants lige damage, hp, speed etc.
+  // TODO: constants like damage, hp, speed etc.
 };
