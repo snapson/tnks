@@ -1,6 +1,8 @@
-module.exports = {
-  // TODO: constants like damage, hp, speed etc.
-
+var Tnks = module.exports = {
+  stage: {       // Size of the main stage
+    w: 1000,
+    h: 550
+  },
   impedient: {
     size: 5,     // Size of one section of impedient in px
     count: 4,    // Count of sections in one impedient
@@ -13,12 +15,26 @@ module.exports = {
     }
   },
   tank: {
-    health: 100
+    health: 100,
+    size: {
+      w: 50,
+      h: 50
+    },
+    speed: 10
   },
   base: {
-    health: 160
+    health: 160,
+    size: {
+      w: 20,
+      h: 20
+    }
   },
   missile: {
-    damage: 20
+    damage: 20,
+    size: {
+      w: 5,
+      h: 10
+    },
+    speed: 10
   }
 };

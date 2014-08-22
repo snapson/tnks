@@ -1,10 +1,13 @@
 
-var express = require('express')
 var jade = require('jade');
 var path = require('path');
 var async = require('async');
+var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+var tnks = require('./tnks');
 
 /*
   TODO:
@@ -35,10 +38,15 @@ app.route('/error')
     res.send( jade.renderFile(path.resolve(app.get('templates'), 'error.jade'), { error: app.get('error') }) );
   });
 
-// Work with tasks creation
 app.route('/')
   .get(function(req, res) {
-    res.send( jade.renderFile(path.resolve(app.get('templates'), 'index.jade')));
+    res.send( jade.renderFile(path.resolve(app.get('templates'), 'index.jade')) );
   });
 
-app.listen( app.get('port') );
+io.on('connection', function(socket) {
+  socket.on('init', function(msg) {
+    io.emit('init', tnks);
+  });
+});
+
+http.listen( app.get('port') );
